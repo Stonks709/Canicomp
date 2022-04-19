@@ -17,6 +17,17 @@
   </a>
 </div>
 <script>
+  var i = 0;
+var txt = 'Biografi Habibie';
+var speed = 100;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
     function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -51,8 +62,9 @@ function topFunction() {
   <meta name="keywords" content="Belajar, Biografi, Presiden, Indonesia">
   <meta name="author" content="Stonks">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<h1 class="judul" align="center">Biografi Habibie</h1>
-        </header>
+  <body onload="typeWriter()">
+  <h1 class="judul" id="demo" align="center"></h1>
+  </header>
     </head>
     &nbsp;
     &nbsp;
